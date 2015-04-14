@@ -1,0 +1,3 @@
+.class { background-image: url(<%= app/views/layouts/images 'slide-1.png' %>) }
+.class { background-image: url(<%= pp/views/layouts/images  'slide-2.png' %>) }
+.class { background-image: url(<%= pp/views/layouts/images  'slide-3.png' %>) }
