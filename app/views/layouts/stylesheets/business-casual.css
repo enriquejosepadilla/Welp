@@ -6,6 +6,22 @@
 
 .form-control {width:120px;}
 
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    height: 350px;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+    background: transparent;
+}
+
 .popover1 {
     max-width: 800px;
     width: auto;
@@ -19,13 +35,12 @@
 
 body{padding-top:20px;}
 
-html body {
-    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    /*background: url('../img/bg.jpg') no-repeat center center fixed;*/
-    background: url('bg.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
+body {
+   background-image: image-url('bg.jpg');
+   background-repeat: no-repeat;
+   background-size: 100%;
 }
+
 
 h1,
 h2,
@@ -50,10 +65,21 @@ hr {
     border-color: #999999;
 }
 
+.navbar.center .navbar-inner {
+    text-align: center;
+}
+
+.navbar.center .navbar-inner .nav {
+    display:inline-block;
+    float: none;
+}
+
+
 .brand,
 .address-bar {
     display: none;
 }
+
 
 .navbar-brand {
     text-transform: uppercase;

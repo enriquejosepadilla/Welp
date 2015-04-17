@@ -3,7 +3,7 @@
 
 <head>
     <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application" "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
    
 
@@ -44,7 +44,6 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-            <%= yield %>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -52,7 +51,6 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="application.html.erb">Welp</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -64,7 +62,7 @@
                         <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="about.html">Contact</a>
                     </li>
                     <li>
                         <a data-placement="bottom" data-toggle="popover1" data-title="Sign up" data-container="body" type="bottom" data-html="true" id="signup" href="#">Sign up</a>
@@ -101,14 +99,11 @@
                             </form>
                         </div>
                     <li>
-                        <div class="input-group col-md-12">
-                                <input type="text" id = "input" class="  search-query form-control" placeholder="SEARCH" />
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <span class=" glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
-                        </div>
+                        <form class="navbar-form pull-right"  size = 400 role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control">
+                        </div> <button type="submit" class="btn btn-default">Search</button>
+                    </form>
                     </li>
                 </ul>
             </div>
@@ -116,58 +111,38 @@
         </div>
         <!-- /.container -->
     </nav>
+    <div class = "jumbotron vertical-center">
+       <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <%= image_tag "slide-1.jpg" %>
 
-    <div class="container">
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12 text-center">
-                    <div id="carousel-example-generic" class="carousel slide">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators hidden-xs">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol>
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                           <div class="item">
-                            <%= image_tag "slide-1.jpg" %>
-                            </div>
-                            <div class="item">
-                                 <%= image_tag "slide-2.jpg" %>
-                            </div>
-                            <div class="item">
-                                 <%= image_tag "slide-3.jpg" %>
-                            </div>
-                        </div>
-
-                        <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                            <span class="icon-prev"></span>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                            <span class="icon-next"></span>
-                        </a>
-                    </div>
-                    <h2 class="brand-before">
-                        <small>Welcome to</small>
-                    </h2>
-                    <h1 class="brand-name">WELP</h1>
-                    <hr class="tagline-divider">
-                    <h2>
-                        <small>By
-                            <strong>Team 2</strong>
-                        </small>
-                    </h2>
                 </div>
             </div>
         </div>
-
+      </div>
+   
         <div class="row">
             <div class="box">
                 <hr class="visible-xs">
+                    <div class="col-md-4">
+                        <h2>Review 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
+                        <a class="btn btn-default" href="#">More Info</a>
+                    </div>
+                <!-- /.col-md-4 -->
+                    <div class="col-md-4">
+                        <h2>Review 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
+                        <a class="btn btn-default" href="#">More Info</a>
+                    </div>
+                <!-- /.col-md-4 -->
+                    <div class="col-md-4">
+                        <h2>Review 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
+                        <a class="btn btn-default" href="#">More Info</a>
+                    </div>
+            <!-- /.col-md-4 -->
                     <div class="col-md-4">
                         <h2>Review 1</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
